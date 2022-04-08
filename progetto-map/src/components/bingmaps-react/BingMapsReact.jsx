@@ -2,18 +2,30 @@ import React from "react";
 import BingMapsReact from "bingmaps-react";
 
 export default function BingMap() {
+
+  const pushPin = {
+    center: {
+      latitude: 44.9199,
+      longitude: 7.42641,
+    },
+    options: {
+      title: "Qui",
+    },
+  }
+  
+  const pushPins = [pushPin];
+  
   return (
-    <BingMapsReact
-      bingMapsKey="AtwtZKlcqle6ldCCZ1JlJbmvlSn5XXDIvSpas7bsQZ_wr46_7EafmL_nHZmjlmLv"
+    <BingMapsReact    
+      bingMapsKey="Aja0Tco8W3lzzzc8lLt1Id9E16tO5ZC4ED9h8KeDRjqOWLfsmNBhSviB_jrAgqfG"
       height="1000px"
       mapOptions={{
         navigationBarMode: "square",
       }}
       width="1000px"
-      viewOptions={{
-        center: { latitude: 42.360081, longitude: -71.058884 },
-        mapTypeId: "grayscale",
-      }}
+      pushPins={pushPins}
+      viewOptions={{ center: { latitude: 44.9199, longitude: 7.42641 } }}
+      
     />
   );
 }
